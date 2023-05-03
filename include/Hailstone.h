@@ -9,7 +9,7 @@ namespace sequence {
 
 
 bool satisfiesHailstone(uint64_t startingNumber);
-
+    
 
 }
 
