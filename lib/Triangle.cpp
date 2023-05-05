@@ -46,6 +46,18 @@ Triangle::isEquilateral() const {
   return side1 == side2 && side2 == side3;
 }
 
+int Triangle::get1() const{
+  return side1;
+}
+
+int Triangle::get2() const{
+  return side2;
+}
+
+int Triangle::get3() const{
+  return side3;
+}
+
 
 Triangle::Kind
 Triangle::getKind() const {
