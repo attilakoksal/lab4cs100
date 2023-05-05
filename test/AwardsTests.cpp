@@ -6,10 +6,10 @@ using ::testing::InSequence;
 
 class stubRankList : public RankList{
     private:
-        std::string nameList[] = {"Sam","Fred","Anthony"};
+        std::string nameList[2] = {"Sam","Fred","Anthony", ""};
         int index = 0;
     public:
-        std::string getNext()override{
+        std::string getNext(){
             if(index <= 2){
                 return nameList[index];
                 index++;
@@ -19,7 +19,7 @@ class stubRankList : public RankList{
             }
         }
 
-}
+};
 
 class MockAwardCeremonyActions : public AwardCeremonyActions{
     public:
@@ -28,7 +28,7 @@ class MockAwardCeremonyActions : public AwardCeremonyActions{
         MOCK_METHOD(void,awardBronze,(std::string),(override));
         MOCK_METHOD(void,awardSilver,(std::string),(override));
         MOCK_METHOD(void,awardGold,(std::string),(override));
-}
+};
 
 TEST(AwardsTests,performAwardCeremony){
     MockAwardCeremonyActions actions;
