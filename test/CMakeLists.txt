@@ -9,4 +9,3 @@ add_executable(runAllAwardsTests
 
 target_link_libraries(runAllAwardsTests gmock gtest gtest_main)
 target_link_libraries(runAllAwardsTests simpleLibrary)
-
